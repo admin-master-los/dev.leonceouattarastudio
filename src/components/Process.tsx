@@ -14,54 +14,54 @@ const Process: React.FC = () => {
   const steps = [
     {
       number: '01',
-      title: 'Découverte & Analyse',
-      description: 'Nous analysons en profondeur vos besoins, vos processus actuels et vos objectifs pour définir la solution idéale.',
+      title: 'Analyse & Stratégie',
+      description: 'Nous analysons vos objectifs business, votre cible et votre positionnement pour définir une stratégie web gagnante.',
       icon: Search,
       color: 'from-cyan-500 to-cyan-600',
       highlights: [
-        'Audit des processus existants',
-        'Identification des points de friction',
-        'Définition des objectifs mesurables',
-        'Établissement du cahier des charges'
+        'Étude de vos objectifs et de votre marché',
+        'Analyse de votre audience cible',
+        'Définition du positionnement digital',
+        'Cahier des charges personnalisé'
       ]
     },
     {
       number: '02',
-      title: 'Conception & Prototype',
-      description: 'Notre équipe conçoit l\'architecture de votre solution et crée des prototypes interactifs pour validation.',
+      title: 'Design & Expérience Utilisateur',
+      description: 'Création d\'une interface moderne et intuitive qui reflète votre image de marque et convertit vos visiteurs en clients.',
       icon: Lightbulb,
       color: 'from-purple-500 to-purple-600',
       highlights: [
-        'Design UX/UI sur mesure',
-        'Architecture technique robuste',
-        'Prototypes interactifs',
-        'Validation avec vos équipes'
+        'Design moderne et responsive',
+        'Parcours utilisateur optimisé',
+        'Identité visuelle cohérente',
+        'Maquettes interactives pour validation'
       ]
     },
     {
       number: '03',
-      title: 'Développement Agile',
-      description: 'Nous développons votre solution en sprints itératifs avec des points de contrôle réguliers pour garantir la qualité.',
+      title: 'Développement & Intégration',
+      description: 'Construction d\'un site web rapide, sécurisé et optimisé pour le SEO avec les technologies les plus performantes.',
       icon: Code2,
       color: 'from-cyan-500 to-purple-500',
       highlights: [
-        'Développement par sprints',
-        'Tests continus et automatisés',
-        'Revues régulières avec vous',
-        'Documentation technique complète'
+        'Code propre et performant',
+        'Site 100% responsive (mobile-first)',
+        'Optimisation SEO avancée',
+        'Sécurité et conformité RGPD'
       ]
     },
     {
       number: '04',
-      title: 'Déploiement & Support',
-      description: 'Mise en production sécurisée, formation de vos équipes et accompagnement continu pour assurer votre succès.',
+      title: 'Lancement & Optimisation',
+      description: 'Mise en ligne professionnelle de votre site avec formation, suivi des performances et optimisation continue.',
       icon: Rocket,
       color: 'from-purple-500 to-pink-500',
       highlights: [
-        'Déploiement progressif sécurisé',
-        'Formation des utilisateurs',
-        'Support technique 24/7',
-        'Maintenance et évolutions'
+        'Déploiement sécurisé et sans interruption',
+        'Formation à la gestion de votre site',
+        'Suivi des performances (analytics)',
+        'Support et évolutions continues'
       ]
     }
   ];
@@ -80,11 +80,11 @@ const Process: React.FC = () => {
           <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
             Comment Nous{' '}
             <span className="bg-gradient-to-r from-cyan-400 to-purple-400 bg-clip-text text-transparent">
-              Travaillons
+              Créons Votre Site
             </span>
           </h2>
           <p className="text-gray-400 text-lg max-w-3xl mx-auto">
-            Un processus éprouvé en 4 étapes pour transformer vos idées en solutions digitales performantes
+            Un processus éprouvé en 4 étapes pour transformer votre vision en un site web professionnel qui génère des résultats
           </p>
         </div>
 
@@ -175,7 +175,7 @@ const Process: React.FC = () => {
         <div className="mt-16 text-center">
           <div className="inline-flex items-center gap-6 px-8 py-4 bg-white/5 border border-white/10 rounded-2xl backdrop-blur-sm">
             <p className="text-gray-300">
-              Prêt à démarrer votre projet ?
+              Prêt à lancer votre site web professionnel ?
             </p>
             <a
               href="#contact"
