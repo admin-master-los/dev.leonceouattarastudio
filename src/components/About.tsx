@@ -8,14 +8,14 @@ const TransformationSection = () => {
     {
       id: 1,
       icon: Target,
-      title: 'Diagnostic & Stratégie',
-      subtitle: 'Analyse de vos besoins métier',
-      description: 'Audit approfondi de vos processus actuels, identification des points de friction et définition des objectifs de transformation.',
+      title: 'Analyse & Stratégie',
+      subtitle: 'Comprendre vos objectifs business',
+      description: 'Audit complet de vos besoins, analyse de votre marché et de votre audience cible pour définir une stratégie web alignée avec vos objectifs de croissance.',
       benefits: [
-        'Cartographie des processus existants',
-        'Identification des opportunités d\'automatisation',
-        'Feuille de route personnalisée',
-        'ROI estimé et KPIs définis'
+        'Étude approfondie de vos objectifs',
+        'Analyse de votre audience et concurrence',
+        'Stratégie de contenu personnalisée',
+        'Cahier des charges détaillé'
       ],
       color: 'from-cyan-500 to-blue-500',
       duration: '1-2 semaines'
@@ -23,14 +23,14 @@ const TransformationSection = () => {
     {
       id: 2,
       icon: Cpu,
-      title: 'Conception & Architecture',
-      subtitle: 'Design de solutions robustes',
-      description: 'Conception technique détaillée avec choix des technologies optimales pour vos contraintes métier et techniques.',
+      title: 'Design & Expérience',
+      subtitle: 'Créer une interface qui convertit',
+      description: 'Conception d\'une identité visuelle moderne et d\'un parcours utilisateur optimisé pour transformer vos visiteurs en clients fidèles.',
       benefits: [
-        'Architecture scalable et sécurisée',
-        'Choix technologiques justifiés',
-        'Maquettes fonctionnelles',
-        'Spécifications techniques complètes'
+        'Design moderne et professionnel',
+        'Interface intuitive et responsive',
+        'Parcours utilisateur optimisé',
+        'Maquettes interactives validées'
       ],
       color: 'from-purple-500 to-pink-500',
       duration: '2-3 semaines'
@@ -38,14 +38,14 @@ const TransformationSection = () => {
     {
       id: 3,
       icon: Rocket,
-      title: 'Développement & Tests',
-      subtitle: 'Réalisation et validation',
-      description: 'Développement itératif avec tests continus, démonstrations régulières et ajustements en temps réel selon vos retours.',
+      title: 'Développement & SEO',
+      subtitle: 'Construire votre présence digitale',
+      description: 'Développement d\'un site web rapide, sécurisé et optimisé pour les moteurs de recherche, avec les meilleures pratiques du web moderne.',
       benefits: [
-        'Méthodologie agile',
-        'Tests automatisés (TDD)',
-        'Démos hebdomadaires',
-        'Code review systématique'
+        'Code performant et maintenable',
+        'Site 100% responsive (mobile-first)',
+        'Optimisation SEO avancée',
+        'Sécurité et conformité RGPD'
       ],
       color: 'from-green-500 to-teal-500',
       duration: '4-12 semaines'
@@ -53,14 +53,14 @@ const TransformationSection = () => {
     {
       id: 4,
       icon: TrendingUp,
-      title: 'Déploiement & Formation',
-      subtitle: 'Mise en production accompagnée',
-      description: 'Déploiement progressif avec formation de vos équipes, documentation complète et support au démarrage.',
+      title: 'Lancement & Croissance',
+      subtitle: 'Mise en ligne et optimisation',
+      description: 'Déploiement professionnel de votre site avec formation complète, suivi des performances et optimisation continue pour maximiser vos résultats.',
       benefits: [
-        'Migration sans interruption',
-        'Formation utilisateurs & admins',
-        'Documentation détaillée',
-        'Assistance au démarrage (1 mois)'
+        'Mise en ligne sans interruption',
+        'Formation à la gestion autonome',
+        'Suivi analytics et performances',
+        'Support et évolutions continues'
       ],
       color: 'from-orange-500 to-red-500',
       duration: '1-2 semaines'
@@ -76,10 +76,10 @@ const TransformationSection = () => {
           <span className="bg-gradient-to-r from-cyan-400 to-purple-400 bg-clip-text text-transparent">
             Processus
           </span>{' '}
-          de Transformation
+          de Création
         </h3>
         <p className="text-sm md:text-base text-gray-400 max-w-2xl mx-auto leading-relaxed">
-          Une méthodologie éprouvée en 4 phases pour digitaliser et optimiser vos processus métier
+          Une méthodologie éprouvée en 4 phases pour créer un site web professionnel qui génère des résultats concrets
         </p>
       </div>
 
