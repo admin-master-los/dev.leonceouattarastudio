@@ -8,82 +8,82 @@ const WhyChooseUs: React.FC = () => {
   const targetSectors = [
     {
       icon: Building2,
-      name: 'Microfinance',
-      shortName: 'MF',
+      name: 'Restaurants & Hôtels',
+      shortName: 'Resto',
       color: 'from-cyan-500 to-blue-600',
       bgColor: 'bg-cyan-500/10',
       borderColor: 'border-cyan-500/30',
       challenges: [
-        'Gestion décentralisée multi-agences',
-        'Digitalisation du crédit agricole',
-        'Scoring automatisé des emprunteurs',
-        'Mobile Money & collecte terrain'
+        'Réservations gérées manuellement',
+        'Faible visibilité en ligne locale',
+        'Absence de présentation attractive',
+        'Site non optimisé pour mobile'
       ],
       solutions: [
-        'Core Microfinance System léger',
-        'Application mobile agent de terrain',
-        'Workflow crédit intelligent',
-        'Analytics prédictif de défaut'
+        'Site vitrine avec système de réservation',
+        'Référencement local Google Maps',
+        'Galerie photos professionnelle',
+        'Menu et carte digitalisés responsive'
       ]
     },
     {
       icon: Banknote,
-      name: 'Banques & Services Financiers',
-      shortName: 'Banque',
+      name: 'Magasins de Vêtements',
+      shortName: 'Mode',
       color: 'from-blue-500 to-purple-600',
       bgColor: 'bg-blue-500/10',
       borderColor: 'border-blue-500/30',
       challenges: [
-        'Conformité réglementaire BCEAO',
-        'Intégration systèmes existants',
-        'Expérience client digitale',
-        'Sécurisation des transactions'
+        'Image de marque peu différenciée',
+        'Difficulté à attirer du trafic',
+        'Catalogue non accessible en ligne',
+        'Concurrence des grandes enseignes'
       ],
       solutions: [
-        'Portails bancaires sécurisés',
-        'Applications mobile banking',
-        'Outils de reporting conformité',
-        'Systèmes anti-fraude adaptés'
+        'Site vitrine élégant et moderne',
+        'Présentation collections et lookbooks',
+        'Stratégie SEO locale ciblée',
+        'Intégration réseaux sociaux'
       ]
     },
     {
       icon: Shield,
-      name: 'Assurance',
-      shortName: 'Assurance',
+      name: 'E-commerce',
+      shortName: 'E-commerce',
       color: 'from-purple-500 to-pink-600',
       bgColor: 'bg-purple-500/10',
       borderColor: 'border-purple-500/30',
       challenges: [
-        'Gestion manuelle des dossiers',
-        'Calcul tarifs complexes',
-        'Suivi client inefficace',
-        'Distribution limitée'
+        'Tunnel de conversion inefficace',
+        'Site lent et peu performant',
+        'Faible visibilité dans Google',
+        'Expérience utilisateur complexe'
       ],
       solutions: [
-        'Plateforme de souscription en ligne',
-        'Workflow sinistre digitalisé',
-        'Calculateur de primes automatisé',
-        'Portail client self-service'
+        'Boutique en ligne optimisée conversion',
+        'Performance et rapidité garanties',
+        'SEO produits et catégories',
+        'Parcours client simplifié et fluide'
       ]
     },
     {
       icon: CreditCard,
-      name: 'Fintech & Paiements',
-      shortName: 'Fintech',
+      name: 'Coachs & Formateurs',
+      shortName: 'Coaching',
       color: 'from-pink-500 to-orange-600',
       bgColor: 'bg-pink-500/10',
       borderColor: 'border-pink-500/30',
       challenges: [
-        'Infrastructure technique complexe',
-        'Intégration opérateurs mobile',
-        'Conformité PCI-DSS',
-        'Expérience utilisateur fluide'
+        'Manque de crédibilité en ligne',
+        'Peu de leads qualifiés',
+        'Processus de vente manuel',
+        'Absence de tunnel automatisé'
       ],
       solutions: [
-        'API de paiement moderne',
-        'Intégration Orange/MTN/Wave',
-        'Tableaux de bord temps réel',
-        'Interface utilisateur intuitive'
+        'Site professionnel qui convertit',
+        'Pages de vente optimisées',
+        'Formulaires et automatisation',
+        'Stratégie de contenu et témoignages'
       ]
     }
   ];
@@ -93,19 +93,19 @@ const WhyChooseUs: React.FC = () => {
     {
       number: '01',
       icon: Shield,
-      title: 'Expertise Bancaire Terrain',
-      description: 'Plus de 6 années d\'expérience au sein d\'institutions bancaires en Côte d\'Ivoire, nous comprenons vos défis quotidiens de l\'intérieur. Cette connaissance pratique du secteur financier ivoirien nous permet de concevoir des solutions qui répondent réellement à vos besoins opérationnels et réglementaires.',
-      highlights: ['+6 ans dans le secteur bancaire', 'Terrain CI', 'BCEAO', 'Besoins réels'],
+      title: 'Expertise Web & Stratégie Digitale',
+      description: 'Plus de 6 années d\'expérience en développement web et marketing digital. Nous comprenons les enjeux business de votre secteur et créons des sites qui génèrent des résultats concrets : plus de clients, plus de ventes, plus de visibilité. Notre approche allie technique, design et stratégie pour transformer votre site en véritable outil de croissance.',
+      highlights: ['+6 ans d\'expérience web', 'Stratégie digitale', 'ROI mesurable', 'Résultats concrets'],
       color: 'from-cyan-500 to-blue-500',
       stat: '+6 ans',
-      statLabel: 'Expérience bancaire'
+      statLabel: 'Expérience web'
     },
     {
       number: '02',
       icon: Lock,
-      title: 'Solutions Sécurisées & Conformes',
-      description: 'Toutes nos solutions respectent les normes de sécurité bancaires : chiffrement des données sensibles, authentification renforcée, traçabilité complète des opérations. Conformité garantie avec les exigences BCEAO et les standards internationaux adaptés au contexte ivoirien.',
-      highlights: ['Chiffrement SSL', 'Auth sécurisée', 'Conformité BCEAO', 'Traçabilité'],
+      title: 'Sites Rapides & Sécurisés',
+      description: 'Tous nos sites sont construits avec les technologies les plus modernes pour garantir rapidité, sécurité et performance optimale. Certificat SSL inclus, hébergement fiable, sauvegardes automatiques, temps de chargement ultra-rapide. Votre site sera conforme aux standards web actuels et optimisé pour le référencement Google.',
+      highlights: ['HTTPS sécurisé', 'Performance optimale', 'SEO technique', 'Sauvegardes auto'],
       color: 'from-blue-500 to-purple-500',
       stat: '100%',
       statLabel: 'Sécurité garantie'
@@ -114,18 +114,18 @@ const WhyChooseUs: React.FC = () => {
       number: '03',
       icon: Zap,
       title: 'Agilité & Réactivité Locale',
-      description: 'Basé à Abidjan, nous sommes disponible pour des échanges en présentiel ou en ligne avec une collaboration étroite. Notre approche agile nous permet de vous livrer rapidement des solutions fonctionnelles, avec des ajustements continus selon vos retours.',
-      highlights: ['Basé Abidjan', 'Disponible', 'Livraison rapide', 'Ajustements'],
+      description: 'Basé à Abidjan, nous sommes disponibles pour des échanges en présentiel ou en ligne avec une collaboration étroite. Notre approche agile nous permet de vous livrer rapidement un site fonctionnel et professionnel, avec des ajustements continus selon vos retours pour garantir votre satisfaction totale.',
+      highlights: ['Basé Abidjan', 'Disponible', 'Livraison rapide', 'Suivi personnalisé'],
       color: 'from-purple-500 to-pink-500',
       stat: '4-6 sem',
-      statLabel: 'Livrable'
+      statLabel: 'Livraison'
     },
     {
       number: '04',
       icon: Users,
-      title: 'Accompagnement Personnalisé',
-      description: 'Nous vous offrons un accompagnement sur mesure, assuré par un interlocuteur unique qui comprend à la fois vos enjeux métier et vos contraintes techniques. Nous formons vos équipes, fournissons une documentation claire et complète, et garantissons un support réactif pour vous permettre de devenir progressivement autonome tout en gardant un haut niveau de performance.',
-      highlights: ['Contact direct', 'Formation équipes', 'Documentation', 'Support réactif'],
+      title: 'Accompagnement Complet',
+      description: 'Nous vous offrons un accompagnement sur mesure de A à Z : de la définition de votre stratégie digitale jusqu\'à la formation pour gérer votre site en autonomie. Un interlocuteur unique vous guide à chaque étape. Documentation claire, formation pratique, support réactif : nous restons à vos côtés pour assurer le succès de votre projet web.',
+      highlights: ['Contact direct', 'Formation incluse', 'Documentation', 'Support continu'],
       color: 'from-pink-500 to-orange-500',
       stat: '1',
       statLabel: 'Interlocuteur unique'
@@ -142,14 +142,14 @@ const WhyChooseUs: React.FC = () => {
     },
     {
       icon: TrendingUp,
-      title: 'Investissement Long Terme',
-      description: 'Partenariat durable, nous grandissons avec votre projet',
+      title: 'Partenariat Durable',
+      description: 'Accompagnement long terme, nous grandissons avec votre projet',
       color: 'bg-blue-500/10 border-blue-500/30'
     },
     {
       icon: Award,
       title: 'Qualité Professionnelle',
-      description: 'Technologies modernes, code propre, documentation',
+      description: 'Technologies modernes, design soigné, performance optimale',
       color: 'bg-purple-500/10 border-purple-500/30'
     }
   ];
@@ -165,7 +165,7 @@ const WhyChooseUs: React.FC = () => {
         <div className="text-center mb-12 sm:mb-14 md:mb-16">
           <div className="inline-flex items-center gap-2 px-3 sm:px-4 py-1.5 sm:py-2 bg-cyan-500/10 border border-cyan-500/30 rounded-full mb-4 sm:mb-6">
             <Sparkles size={14} className="text-cyan-400 sm:w-4 sm:h-4" />
-            <span className="text-cyan-400 text-xs sm:text-sm font-medium">Votre partenaire digital en Côte d'Ivoire</span>
+            <span className="text-cyan-400 text-xs sm:text-sm font-medium">Votre partenaire web en Côte d'Ivoire</span>
           </div>
           <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold leading-tight mb-4 sm:mb-6">
             <span className="text-white">Pourquoi </span>
@@ -173,10 +173,10 @@ const WhyChooseUs: React.FC = () => {
               Leonce Ouattara Studio
             </span>
             <br />
-            <span className="text-white">Pour vos défits ?</span>
+            <span className="text-white">Pour votre site web ?</span>
           </h2>
           <p className="text-base sm:text-lg md:text-xl text-gray-400 max-w-3xl mx-auto px-4">
-            Solutions digitales sur-mesure pour institutions financières en Côte d'Ivoire
+            Sites web professionnels et performants pour entreprises en Côte d'Ivoire
           </p>
         </div>
 
