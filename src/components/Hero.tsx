@@ -25,27 +25,27 @@ const Hero: React.FC = () => {
             {/* Badge */}
             <div className="inline-flex items-center gap-2 bg-cyan-500/10 border border-cyan-500/30 rounded-full px-4 py-2 backdrop-blur-sm">
               <TrendingUp size={16} className="text-cyan-400" />
-              <span className="text-sm text-cyan-400 font-medium">Solutions Digitales sur Mesure</span>
+              <span className="text-sm text-cyan-400 font-medium">Création de portail web sur Mesure</span>
             </div>
 
             {/* Main Title */}
             <div className="space-y-4">
               <h1 className="text-white font-bold leading-[0.9] tracking-tight">
                 <span className="block text-4xl sm:text-5xl md:text-6xl lg:text-7xl">
-                  NOUS
+                  NOUS DEVELOPPONS
                 </span>
                 <span className="block text-4xl sm:text-5xl md:text-6xl lg:text-7xl bg-gradient-to-r from-cyan-400 to-purple-400 bg-clip-text text-transparent">
-                  DIGITALISONS
+                  VOTRE VISIBILITÉ
                 </span>
                 <span className="block text-4xl sm:text-5xl md:text-6xl lg:text-7xl">
-                  VOS PROCESSUS
+                  EN LIGNE 
                 </span>
               </h1>
             </div>
 
             {/* Subtitle */}
             <p className="text-xl md:text-2xl text-gray-300 font-light max-w-xl">
-              Opération zéro papier, Zéro suspend
+              Opération Votre site sur mesure, vos objectifs atteints.
             </p>
 
             {/* Target Audience */}
@@ -53,13 +53,13 @@ const Hero: React.FC = () => {
               <span className="text-sm font-medium">Spécialisés pour :</span>
               <div className="flex flex-wrap gap-2">
                 <span className="px-3 py-1 bg-white/5 rounded-full text-sm border border-cyan-500/20 text-cyan-400">
-                  Banques
+                  Cabinets de formation
                 </span>
                 <span className="px-3 py-1 bg-white/5 rounded-full text-sm border border-purple-500/20 text-purple-400">
-                  Assurances
+                  Universités & écoles privées
                 </span>
                 <span className="px-3 py-1 bg-white/5 rounded-full text-sm border border-cyan-500/20 text-cyan-400">
-                  Microfinance
+                  Coach & Formateurs en ligne
                 </span>
               </div>
             </div>
@@ -119,7 +119,7 @@ const Hero: React.FC = () => {
           <div className="relative hidden lg:block h-[700px]">
             
             {/* Main Photo Container */}
-            <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[700px] rounded-2xl overflow-hidden shadow-[0_50px_100px_-20px_rgba(0,0,0,0.9)] transition-all duration-700 hover:scale-[1.03] hover:shadow-[0_50px_100px_-20px_rgba(6,182,212,0.3)]"
+            <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[700px] overflow-hidden transition-all duration-700 hover:scale-[1.03]"
               style={{
                 transform: 'translate(-50%, -50%)',
                 zIndex: 3,
@@ -130,9 +130,6 @@ const Hero: React.FC = () => {
                 alt="Leonce Ouattara - Fondateur lOS"
                 className="w-full h-full object-cover object-center"
               />
-              
-              {/* Gradient overlay for premium effect */}
-              <div className="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent pointer-events-none" />
             </div>
 
             {/* Enhanced Floating Elements with glow */}
