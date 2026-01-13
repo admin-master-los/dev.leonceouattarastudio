@@ -32,13 +32,13 @@ const Hero: React.FC = () => {
             <div className="space-y-4">
               <h1 className="text-white font-bold leading-[0.9] tracking-tight">
                 <span className="block text-4xl sm:text-5xl md:text-6xl lg:text-7xl">
-                  JE
+                  NOUS
                 </span>
                 <span className="block text-4xl sm:text-5xl md:text-6xl lg:text-7xl bg-gradient-to-r from-cyan-400 to-purple-400 bg-clip-text text-transparent">
-                  CREE VOTRE SITE
+                  DIGITALISONS
                 </span>
                 <span className="block text-4xl sm:text-5xl md:text-6xl lg:text-7xl">
-                  WEB PROFESSIONNEL
+                  VOS PROCESSUS
                 </span>
               </h1>
             </div>
@@ -53,10 +53,10 @@ const Hero: React.FC = () => {
               <span className="text-sm font-medium">Spécialisés pour :</span>
               <div className="flex flex-wrap gap-2">
                 <span className="px-3 py-1 bg-white/5 rounded-full text-sm border border-cyan-500/20 text-cyan-400">
-                  PME/PMI
+                  Banques
                 </span>
                 <span className="px-3 py-1 bg-white/5 rounded-full text-sm border border-purple-500/20 text-purple-400">
-                  Entrepreneurs
+                  Assurances
                 </span>
                 <span className="px-3 py-1 bg-white/5 rounded-full text-sm border border-cyan-500/20 text-cyan-400">
                   Microfinance
@@ -78,7 +78,7 @@ const Hero: React.FC = () => {
                 onClick={() => scrollToSection('#portfolio')}
                 className="group border-2 border-white/20 text-white px-8 py-4 rounded-lg hover:bg-white/10 transition-all duration-300 font-semibold text-lg flex items-center justify-center gap-2 backdrop-blur-sm"
               >
-                Mes réalisations
+                Nos réalisations
               </button>
             </div>
 
@@ -119,7 +119,7 @@ const Hero: React.FC = () => {
           <div className="relative hidden lg:block h-[700px]">
             
             {/* Main Photo Container */}
-            <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[500px] h-[600px] rounded-2xl overflow-hidden shadow-[0_50px_100px_-20px_rgba(0,0,0,0.9)] border-[3px] border-white/20 transition-all duration-700 hover:scale-[1.03] hover:shadow-[0_50px_100px_-20px_rgba(6,182,212,0.3)]"
+            <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[700px] rounded-2xl overflow-hidden shadow-[0_50px_100px_-20px_rgba(0,0,0,0.9)] transition-all duration-700 hover:scale-[1.03] hover:shadow-[0_50px_100px_-20px_rgba(6,182,212,0.3)]"
               style={{
                 transform: 'translate(-50%, -50%)',
                 zIndex: 3,
