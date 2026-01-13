@@ -32,10 +32,10 @@ const Hero: React.FC = () => {
             <div className="space-y-4">
               <h1 className="text-white font-bold leading-[0.9] tracking-tight">
                 <span className="block text-4xl sm:text-5xl md:text-6xl lg:text-7xl">
-                  NOUS CRÉONS
+                  CRÉONS VOTRE
                 </span>
                 <span className="block text-4xl sm:text-5xl md:text-6xl lg:text-7xl bg-gradient-to-r from-cyan-400 to-purple-400 bg-clip-text text-transparent">
-                  VOTRE RÉUSSITE
+                  RÉUSSITE
                 </span>
                 <span className="block text-4xl sm:text-5xl md:text-6xl lg:text-7xl">
                   EN LIGNE 
