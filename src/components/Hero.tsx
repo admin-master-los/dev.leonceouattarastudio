@@ -32,10 +32,10 @@ const Hero: React.FC = () => {
             <div className="space-y-4">
               <h1 className="text-white font-bold leading-[0.9] tracking-tight">
                 <span className="block text-4xl sm:text-5xl md:text-6xl lg:text-7xl">
-                  NOUS DEVELOPPONS
+                  NOUS CRÉONS
                 </span>
                 <span className="block text-4xl sm:text-5xl md:text-6xl lg:text-7xl bg-gradient-to-r from-cyan-400 to-purple-400 bg-clip-text text-transparent">
-                  VOTRE VISIBILITÉ
+                  VOTRE RÉUSSITE
                 </span>
                 <span className="block text-4xl sm:text-5xl md:text-6xl lg:text-7xl">
                   EN LIGNE 
@@ -45,7 +45,7 @@ const Hero: React.FC = () => {
 
             {/* Subtitle */}
             <p className="text-xl md:text-2xl text-gray-300 font-light max-w-xl">
-              Opération Votre site sur mesure, vos objectifs atteints.
+              Opération Votre site sur mesure, Des sites au design professionnel pour générer plus de prospects, de ventes et de fans !
             </p>
 
             {/* Target Audience */}
@@ -53,13 +53,19 @@ const Hero: React.FC = () => {
               <span className="text-sm font-medium">Spécialisés pour :</span>
               <div className="flex flex-wrap gap-2">
                 <span className="px-3 py-1 bg-white/5 rounded-full text-sm border border-cyan-500/20 text-cyan-400">
-                  Cabinets de formation
+                  Restaurants
                 </span>
                 <span className="px-3 py-1 bg-white/5 rounded-full text-sm border border-purple-500/20 text-purple-400">
-                  Universités & écoles privées
+                  Hôtels 
                 </span>
                 <span className="px-3 py-1 bg-white/5 rounded-full text-sm border border-cyan-500/20 text-cyan-400">
-                  Coach & Formateurs en ligne
+                  Magasin de vêtements
+                </span>
+                <span className="px-3 py-1 bg-white/5 rounded-full text-sm border border-cyan-500/20 text-cyan-400">
+                  E-commerce
+                </span>
+                <span className="px-3 py-1 bg-white/5 rounded-full text-sm border border-cyan-500/20 text-cyan-400">
+                  Coach & Formateur en ligne
                 </span>
               </div>
             </div>
