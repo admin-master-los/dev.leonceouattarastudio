@@ -126,7 +126,7 @@ const Hero: React.FC = () => {
               }}
             >
               <img 
-                src="/public/assets/Leonce_Ouattara.png"
+                src="https://aruoiqvgxoxhdlnerwww.supabase.co/storage/v1/object/public/portfolio-images/avatars/Leonce_Ouattara.png"
                 alt="Leonce Ouattara - Fondateur lOS"
                 className="w-full h-full object-cover object-center"
               />
