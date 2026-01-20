@@ -285,7 +285,7 @@ const Portfolio: React.FC = () => {
 
                 {/* CTA Button - Responsive */}
                 <Link
-                  to="/#contact"
+                  to={selectedProject.content_project_modal.demo_link}
                   target="_blank"
                   className="group relative px-6 sm:px-8 lg:px-12 py-3 sm:py-4 lg:py-5 bg-transparent border-2 border-cyan-400 text-white rounded-lg overflow-hidden transition-all duration-300 hover:border-cyan-300 font-semibold text-sm sm:text-base lg:text-lg"
                 >
@@ -517,7 +517,7 @@ const Portfolio: React.FC = () => {
                       {selectedProject.content_project_modal.demo_link &&
                         selectedProject.content_project_modal.demo_link !== '#' && (
                           <a
-                            href={selectedProject.content_project_modal.demo_link}
+                            href="#contact"
                             target="_blank"
                             rel="noopener noreferrer"
                             className="px-6 sm:px-8 lg:px-10 py-3 sm:py-4 bg-white/10 backdrop-blur-sm border border-white/20 text-white rounded-lg sm:rounded-xl font-semibold text-sm sm:text-base lg:text-lg hover:bg-white/20 transition-all duration-300 flex items-center justify-center gap-2"
