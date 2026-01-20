@@ -517,7 +517,7 @@ const Portfolio: React.FC = () => {
                       {selectedProject.content_project_modal.demo_link &&
                         selectedProject.content_project_modal.demo_link !== '#' && (
                           <a
-                            href="#contact"
+                            href="https://leonceouattarastudiogroup.site/reserver"
                             target="_blank"
                             rel="noopener noreferrer"
                             className="px-6 sm:px-8 lg:px-10 py-3 sm:py-4 bg-white/10 backdrop-blur-sm border border-white/20 text-white rounded-lg sm:rounded-xl font-semibold text-sm sm:text-base lg:text-lg hover:bg-white/20 transition-all duration-300 flex items-center justify-center gap-2"
