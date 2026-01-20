@@ -285,7 +285,7 @@ const Portfolio: React.FC = () => {
 
                 {/* CTA Button - Responsive */}
                 <Link
-                  to="/reserver"
+                  to="/#contact"
                   target="_blank"
                   className="group relative px-6 sm:px-8 lg:px-12 py-3 sm:py-4 lg:py-5 bg-transparent border-2 border-cyan-400 text-white rounded-lg overflow-hidden transition-all duration-300 hover:border-cyan-300 font-semibold text-sm sm:text-base lg:text-lg"
                 >
