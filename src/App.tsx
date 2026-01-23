@@ -108,10 +108,10 @@ function App() {
                     <div className="min-h-screen bg-[#0A0A0B] text-white overflow-x-hidden">
                       {/* SEO pour page d'accueil */}
                       <SEO 
-                        title="Leonce Ouattara Studio - Digitalisation Secteur Financier en Côte d'Ivoire"
-                        description="Expert en développement web pour banques, assurances et microfinance en Côte d'Ivoire. Solutions digitales sur mesure pour transformation zéro papier. Expertise fintech Côte d'Ivoire."
-                        keywords="développement web, digitalisation bancaire, fintech Afrique, transformation digitale, banque numérique, assurance digitale, microfinance, Côte d'Ivoire, Abidjan, zéro papier"
-                        url="https://leonceouattarastudiogroup.site"
+                        title="Leonce Ouattara Studio - Nous créeons votre réussite en ligne"
+                        description="Expert en développement web pour Restaurant, Industrie e-commerce, Immobilier & BTP et Établissements universitaires et scolaires privés. Solutions WEB sur mesure pour transformation zéro papier."
+                        keywords="développement web, digitalisation bancaire, fintech Afrique, transformation digitale, banque numérique, assurance digitale, microfinance, Restaurant, e-commerce, Immobilier, BTP, Hôtel, Boutique PME/PMI, Côte d'Ivoire, Abidjan, zéro papier"
+                        url="https://dev.leonceouattarastudiogroup.site"
                       />
 
                       {/* Animated Background */}
@@ -145,10 +145,10 @@ function App() {
                   element={
                     <>
                       <SEO 
-                        title="Blog Tech - Actualités & Conseils Digitalisation Bancaire"
-                        description="Découvrez nos articles, guides et tendances sur la transformation digitale des banques, assurances et institutions financières en Afrique. Conseils d'experts fintech."
+                        title="Blog Tech - Actualités & Conseils"
+                        description="Découvrez nos articles, guides et tendances sur la réussite de votre business ou entreprise en ligne, Hôtel, restaurant, Immobilier, BTP, e-commerce, Boutique PME/PMI. Conseils d'experts web."
                         keywords="blog fintech, transformation digitale banque, conseils digitalisation, actualités fintech Afrique, guides développement web, tendances banking"
-                        url="https://leonceouattarastudiogroup.site/blog-tech"
+                        url="https://dev.leonceouattarastudiogroup.site/blog-tech"
                       />
                       <BlogTech />
                     </>
@@ -163,9 +163,9 @@ function App() {
                       <>
                         <SEO 
                           title="Blog - Articles & Insights Transformation Digitale"
-                          description="Explorez nos articles sur la digitalisation du secteur financier, les meilleures pratiques fintech et les innovations technologiques pour banques et assurances en Afrique."
-                          keywords="articles fintech, blog transformation digitale, insights banking, innovation financière, digitalisation Afrique"
-                          url="https://leonceouattarastudiogroup.site/blog"
+                          description="Explorez nos articles sur la digitalisation de votre entreprise, les meilleures pratiques et les innovations technologiques pour votre réussite en ligne."
+                          keywords="articles fintech, blog transformation digitale, insights pme, innovation financière, digitalisation Afrique"
+                          url="https://dev.leonceouattarastudiogroup.site/blog"
                         />
                         <BlogTech />
                       </>
@@ -192,9 +192,9 @@ function App() {
                     <>
                       <SEO 
                         title="Réserver une Consultation - Leonce Ouattara Studio"
-                        description="Réservez un rendez-vous avec nos experts pour discuter de votre projet de digitalisation bancaire. Consultation gratuite pour banques, assurances et microfinance."
+                        description="Réservez un rendez-vous avec nos experts pour discuter de votre projet. Consultation gratuite."
                         keywords="réservation consultation, rendez-vous digitalisation, consultation fintech, devis gratuit, booking"
-                        url="https://leonceouattarastudiogroup.site/reserver"
+                        url="https://dev.leonceouattarastudiogroup.site/reserver"
                       />
                       <BookingPage />
                     </>
@@ -211,7 +211,7 @@ function App() {
                         title="Politique de Confidentialité - Leonce Ouattara Studio"
                         description="Découvrez comment Leonce Ouattara Studio collecte, utilise et protège vos données personnelles. Transparence totale sur notre politique de confidentialité."
                         keywords="politique de confidentialité, protection données, RGPD, vie privée, sécurité données"
-                        url="https://leonceouattarastudiogroup.site/confidentialite"
+                        url="https://dev.leonceouattarastudiogroup.site/confidentialite"
                       />
                       <Confidentialite />
                     </>
@@ -226,7 +226,7 @@ function App() {
                         title="Conformité RGPD - Leonce Ouattara Studio"
                         description="Notre engagement RGPD : protection de vos données personnelles, droits garantis, mesures de sécurité. Conformité totale au règlement européen."
                         keywords="RGPD, conformité RGPD, droits RGPD, protection données personnelles, sécurité informatique"
-                        url="https://leonceouattarastudiogroup.site/rgpd"
+                        url="https://dev.leonceouattarastudiogroup.site/rgpd"
                       />
                       <RGPD />
                     </>
