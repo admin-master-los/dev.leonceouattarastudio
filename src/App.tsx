@@ -108,7 +108,7 @@ function App() {
                     <div className="min-h-screen bg-[#0A0A0B] text-white overflow-x-hidden">
                       {/* SEO pour page d'accueil */}
                       <SEO 
-                        title="Leonce Ouattara Studio - Nous créeons votre réussite en ligne"
+                        title="Leonce Ouattara Studio - Nous créons votre réussite en ligne"
                         description="Expert en développement web pour Restaurant, Industrie e-commerce, Immobilier & BTP et Établissements universitaires et scolaires privés. Solutions WEB sur mesure pour transformation zéro papier."
                         keywords="développement web, digitalisation bancaire, fintech Afrique, transformation digitale, banque numérique, assurance digitale, microfinance, Restaurant, e-commerce, Immobilier, BTP, Hôtel, Boutique PME/PMI, Côte d'Ivoire, Abidjan, zéro papier"
                         url="https://dev.leonceouattarastudiogroup.site"
@@ -194,7 +194,7 @@ function App() {
                         title="Réserver une Consultation - Leonce Ouattara Studio"
                         description="Réservez un rendez-vous avec nos experts pour discuter de votre projet. Consultation gratuite."
                         keywords="réservation consultation, rendez-vous digitalisation, consultation fintech, devis gratuit, booking"
-                        url="https://dev.leonceouattarastudiogroup.site/reserver"
+                        url="https://leonceouattarastudiogroup.site/reserver"
                       />
                       <BookingPage />
                     </>
