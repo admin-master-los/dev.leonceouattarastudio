@@ -6,7 +6,7 @@ import {
   X,
   CheckCircle2,
   Code2,
-  Server, 
+  Server,  
   Cloud,
 } from 'lucide-react';
 import { useProjects } from '../lib/useSupabaseData';
