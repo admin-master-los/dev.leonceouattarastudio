@@ -125,36 +125,47 @@ const Portfolio = () => {
           {/* Bouton Gauche */}
           <button
             onClick={() => scrollCarousel('left')}
-            className="absolute left-2 sm:left-4 top-1/2 -translate-y-1/2 z-20 w-10 h-10 sm:w-12 sm:h-12 bg-white/10 backdrop-blur-md border border-white/20 rounded-full flex items-center justify-center hover:bg-cyan-500 hover:border-cyan-500 transition-all duration-300 group"
+            className="absolute left-1 sm:left-2 md:left-4 top-1/2 -translate-y-1/2 z-20 w-9 h-9 sm:w-10 sm:h-10 md:w-12 md:h-12 bg-white/10 backdrop-blur-md border border-white/20 rounded-full flex items-center justify-center hover:bg-cyan-500 hover:border-cyan-500 transition-all duration-300 group shadow-lg"
             aria-label="Précédent"
           >
-            <ChevronLeft size={20} className="sm:w-6 sm:h-6 text-white group-hover:scale-110 transition-transform" />
+            <ChevronLeft className="w-5 h-5 sm:w-5 sm:h-5 md:w-6 md:h-6 text-white group-hover:scale-110 transition-transform" />
           </button>
 
           {/* Bouton Droit */}
           <button
             onClick={() => scrollCarousel('right')}
-            className="absolute right-2 sm:right-4 top-1/2 -translate-y-1/2 z-20 w-10 h-10 sm:w-12 sm:h-12 bg-white/10 backdrop-blur-md border border-white/20 rounded-full flex items-center justify-center hover:bg-cyan-500 hover:border-cyan-500 transition-all duration-300 group"
+            className="absolute right-1 sm:right-2 md:right-4 top-1/2 -translate-y-1/2 z-20 w-9 h-9 sm:w-10 sm:h-10 md:w-12 md:h-12 bg-white/10 backdrop-blur-md border border-white/20 rounded-full flex items-center justify-center hover:bg-cyan-500 hover:border-cyan-500 transition-all duration-300 group shadow-lg"
             aria-label="Suivant"
           >
-            <ChevronRight size={20} className="sm:w-6 sm:h-6 text-white group-hover:scale-110 transition-transform" />
+            <ChevronRight className="w-5 h-5 sm:w-5 sm:h-5 md:w-6 md:h-6 text-white group-hover:scale-110 transition-transform" />
           </button>
 
           <div
             ref={carouselRef}
-            className="flex gap-6 overflow-x-auto scroll-smooth"
-            style={{ scrollbarWidth: 'none', msOverflowStyle: 'none' }}
+            className="flex gap-4 sm:gap-5 md:gap-6 overflow-x-auto scroll-smooth px-1 sm:px-2"
+            style={{ 
+              scrollbarWidth: 'none', 
+              msOverflowStyle: 'none',
+              WebkitOverflowScrolling: 'touch'
+            }}
           >
+            <style>{`
+              div::-webkit-scrollbar {
+                display: none;
+              }
+            `}</style>
             {!loading && duplicatedProjects.map((project, index) => {
               return (
                 <div
                   key={`${project.id}-${index}`}
                   onMouseEnter={() => setIsPaused(true)}
                   onMouseLeave={() => setIsPaused(false)}
-                  className="flex-shrink-0 w-[90vw] sm:w-[45vw] lg:w-[32vw] bg-white/5 backdrop-blur-sm border border-gray-700/50 rounded-2xl sm:rounded-3xl overflow-hidden hover:border-cyan-500/50 hover:bg-white/10 transition-all duration-500 group hover:scale-105 hover:shadow-2xl hover:shadow-cyan-500/20"
+                  onTouchStart={() => setIsPaused(true)}
+                  onTouchEnd={() => setIsPaused(false)}
+                  className="flex-shrink-0 w-[85vw] sm:w-[70vw] md:w-[45vw] lg:w-[32vw] bg-white/5 backdrop-blur-sm border border-gray-700/50 rounded-2xl overflow-hidden hover:border-cyan-500/50 hover:bg-white/10 transition-all duration-500 group hover:scale-105 hover:shadow-2xl hover:shadow-cyan-500/20"
                 >
                   <div className="relative">
-                    <div className="relative overflow-hidden h-48 sm:h-56 lg:h-64">
+                    <div className="relative overflow-hidden h-44 sm:h-52 md:h-56 lg:h-64">
                       <img
                         src={project.image}
                         alt={project.title}
@@ -167,35 +178,35 @@ const Portfolio = () => {
                           onClick={() => window.open(project.link, '_blank')}
                           className="w-9 h-9 sm:w-10 sm:h-10 bg-white/20 backdrop-blur-sm border border-white/30 rounded-full flex items-center justify-center hover:bg-cyan-500 hover:border-cyan-500 transition-all duration-300"
                         >
-                          <ExternalLink size={14} className="sm:w-4 sm:h-4 text-white" />
+                          <ExternalLink className="w-4 h-4 text-white" />
                         </button>
                         <button className="w-9 h-9 sm:w-10 sm:h-10 bg-white/20 backdrop-blur-sm border border-white/30 rounded-full flex items-center justify-center hover:bg-purple-500 hover:border-purple-500 transition-all duration-300">
-                          <Github size={14} className="sm:w-4 sm:h-4 text-white" />
+                          <Github className="w-4 h-4 text-white" />
                         </button>
                       </div>
                     </div>
                   </div>
 
-                  <div className="p-5 sm:p-6 lg:p-8 space-y-4 sm:space-y-6">
-                    <div className="space-y-3 sm:space-y-4">
-                      <h3 className="text-xl sm:text-2xl font-bold text-white mb-2 sm:mb-3 group-hover:text-cyan-400 transition-colors duration-300">
+                  <div className="p-4 sm:p-5 md:p-6 lg:p-8 space-y-3 sm:space-y-4 md:space-y-6">
+                    <div className="space-y-2 sm:space-y-3 md:space-y-4">
+                      <h3 className="text-lg sm:text-xl md:text-2xl font-bold text-white mb-2 group-hover:text-cyan-400 transition-colors duration-300 line-clamp-2">
                         {project.title}
                       </h3>
-                      <p className="text-sm sm:text-base text-gray-400 leading-relaxed">
+                      <p className="text-sm sm:text-base text-gray-400 leading-relaxed line-clamp-3">
                         {project.description}
                       </p>
                     </div>
 
                     <div className="bg-white/5 backdrop-blur-sm border border-gray-700/50 rounded-lg sm:rounded-xl p-3 sm:p-4">
                       <h4 className="text-white font-semibold mb-2 sm:mb-3 flex items-center gap-2 text-xs sm:text-sm">
-                        <Github size={16} className="sm:w-[18px] sm:h-[18px] text-cyan-400" />
-                        Stack Technique
+                        <Github className="w-4 h-4 sm:w-[18px] sm:h-[18px] text-cyan-400 flex-shrink-0" />
+                        <span className="truncate">Stack Technique</span>
                       </h4>
-                      <div className="flex flex-wrap gap-2">
+                      <div className="flex flex-wrap gap-1.5 sm:gap-2">
                         {project.tech.map((tech, techIndex) => (
                           <span
                             key={techIndex}
-                            className="bg-gradient-to-r from-cyan-500/20 to-purple-500/20 border border-cyan-500/30 text-cyan-400 px-2.5 sm:px-3 py-1 rounded-full text-xs font-medium hover:bg-gradient-to-r hover:from-cyan-500/40 hover:to-purple-500/40 transition-all duration-300"
+                            className="bg-gradient-to-r from-cyan-500/20 to-purple-500/20 border border-cyan-500/30 text-cyan-400 px-2 sm:px-2.5 md:px-3 py-1 rounded-full text-xs font-medium hover:bg-gradient-to-r hover:from-cyan-500/40 hover:to-purple-500/40 transition-all duration-300"
                           >
                             {tech}
                           </span>
@@ -205,16 +216,16 @@ const Portfolio = () => {
 
                     <div className="bg-white/5 backdrop-blur-sm border border-purple-500/20 rounded-lg sm:rounded-xl p-3 sm:p-4">
                       <h4 className="text-white font-semibold mb-2 sm:mb-3 flex items-center gap-2 text-xs sm:text-sm">
-                        <TrendingUp size={16} className="sm:w-[18px] sm:h-[18px] text-purple-400" />
-                        Résultats Obtenus
+                        <TrendingUp className="w-4 h-4 sm:w-[18px] sm:h-[18px] text-purple-400 flex-shrink-0" />
+                        <span className="truncate">Résultats Obtenus</span>
                       </h4>
-                      <div className="grid grid-cols-1 sm:grid-cols-3 gap-3 sm:gap-4">
+                      <div className="grid grid-cols-3 gap-2 sm:gap-3 md:gap-4">
                         {project.results.map((result, resultIndex) => (
                           <div
                             key={resultIndex}
-                            className="text-center bg-white/5 rounded-lg p-2.5 sm:p-3"
+                            className="text-center bg-white/5 rounded-lg p-2 sm:p-2.5 md:p-3"
                           >
-                            <div className="text-xs sm:text-sm font-bold text-purple-400">
+                            <div className="text-xs sm:text-sm font-bold text-purple-400 truncate">
                               {result}
                             </div>
                           </div>
@@ -222,15 +233,15 @@ const Portfolio = () => {
                       </div>
                     </div>
 
-                    <div className="flex flex-col sm:flex-row gap-3">
+                    <div className="flex flex-col gap-2 sm:gap-3 pt-2">
                       <button
                         onClick={() => openProjectModal(project, index % projects.length)}
-                        className="flex-1 bg-gradient-to-r from-cyan-500 to-purple-500 text-white px-4 py-2.5 sm:py-3 rounded-lg sm:rounded-xl hover:shadow-xl hover:shadow-cyan-500/25 transition-all duration-300 font-semibold text-sm sm:text-base hover:scale-105 inline-flex items-center justify-center gap-2 relative overflow-hidden group/btn"
+                        className="w-full bg-gradient-to-r from-cyan-500 to-purple-500 text-white px-4 py-2.5 sm:py-3 rounded-lg sm:rounded-xl hover:shadow-xl hover:shadow-cyan-500/25 transition-all duration-300 font-semibold text-sm sm:text-base hover:scale-105 inline-flex items-center justify-center gap-2 relative overflow-hidden group/btn"
                       >
                         <div className="absolute inset-0 bg-gradient-to-r from-purple-500 to-cyan-500 opacity-0 group-hover/btn:opacity-100 transition-opacity duration-300" />
                         <span className="relative z-10 flex items-center gap-2">
-                          <ExternalLink size={16} className="sm:w-[18px] sm:h-[18px]" />
-                          Voir le projet
+                          <ExternalLink className="w-4 h-4 sm:w-[18px] sm:h-[18px] flex-shrink-0" />
+                          <span className="truncate">Voir le projet</span>
                         </span>
                       </button>
                       <button
@@ -239,9 +250,9 @@ const Portfolio = () => {
                             .querySelector('#contact')
                             ?.scrollIntoView({ behavior: 'smooth' })
                         }
-                        className="flex-1 border-2 border-cyan-400 text-cyan-400 px-4 py-2.5 sm:py-3 rounded-lg sm:rounded-xl hover:bg-cyan-400 hover:text-black transition-all duration-300 font-semibold text-sm sm:text-base hover:scale-105 inline-flex items-center justify-center gap-2"
+                        className="w-full border-2 border-cyan-400 text-cyan-400 px-4 py-2.5 sm:py-3 rounded-lg sm:rounded-xl hover:bg-cyan-400 hover:text-black transition-all duration-300 font-semibold text-sm sm:text-base hover:scale-105 inline-flex items-center justify-center gap-2"
                       >
-                        Projet similaire ?
+                        <span className="truncate">Projet similaire ?</span>
                       </button>
                     </div>
                   </div>
@@ -250,8 +261,8 @@ const Portfolio = () => {
             })}
           </div>
 
-          <div className="pointer-events-none absolute left-0 top-0 bottom-0 w-32 bg-gradient-to-r from-black to-transparent z-10" />
-          <div className="pointer-events-none absolute right-0 top-0 bottom-0 w-32 bg-gradient-to-l from-black to-transparent z-10" />
+          <div className="pointer-events-none absolute left-0 top-0 bottom-0 w-12 sm:w-20 md:w-32 bg-gradient-to-r from-black to-transparent z-10" />
+          <div className="pointer-events-none absolute right-0 top-0 bottom-0 w-12 sm:w-20 md:w-32 bg-gradient-to-l from-black to-transparent z-10" />
         </div>
 
         <div className="text-center mt-12 sm:mt-16 bg-gradient-to-r from-cyan-500/10 to-purple-500/10 border border-cyan-500/20 rounded-xl sm:rounded-2xl p-6 sm:p-8 lg:p-12">
