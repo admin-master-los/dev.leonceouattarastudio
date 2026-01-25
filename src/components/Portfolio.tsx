@@ -40,9 +40,18 @@ const Portfolio = () => {
 
   const scrollCarousel = (direction) => {
     if (!carouselRef.current) return;
-    const scrollAmount = carouselRef.current.offsetWidth * 0.8;
-    carouselRef.current.scrollBy({
-      left: direction === 'left' ? -scrollAmount : scrollAmount,
+    
+    const cardWidth = carouselRef.current.querySelector('div')?.offsetWidth || 0;
+    const gap = 24;
+    const scrollAmount = cardWidth + gap;
+    
+    const currentScroll = carouselRef.current.scrollLeft;
+    const targetScroll = direction === 'left' 
+      ? currentScroll - scrollAmount 
+      : currentScroll + scrollAmount;
+    
+    carouselRef.current.scrollTo({
+      left: targetScroll,
       behavior: 'smooth'
     });
   };
@@ -72,7 +81,7 @@ const Portfolio = () => {
     if (!carouselRef.current || loading || projects.length === 0) return;
 
     const carousel = carouselRef.current;
-    const scrollSpeed = 1;
+    const scrollSpeed = 2.5;
     let animationId;
 
     const animate = () => {
@@ -133,7 +142,7 @@ const Portfolio = () => {
 
           <div
             ref={carouselRef}
-            className="flex gap-6 overflow-x-hidden scroll-smooth"
+            className="flex gap-6 overflow-x-auto scroll-smooth"
             style={{ scrollbarWidth: 'none', msOverflowStyle: 'none' }}
           >
             {!loading && duplicatedProjects.map((project, index) => {
