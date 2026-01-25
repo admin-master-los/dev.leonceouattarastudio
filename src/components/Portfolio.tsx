@@ -241,8 +241,8 @@ const Portfolio = () => {
             })}
           </div>
 
-          <div className="pointer-events-none absolute left-0 top-0 bottom-0 w-12 sm:w-20 md:w-32 bg-gradient-to-r from-black to-transparent z-10" />
-          <div className="pointer-events-none absolute right-0 top-0 bottom-0 w-12 sm:w-20 md:w-32 bg-gradient-to-l from-black to-transparent z-10" />
+          <div className="pointer-events-none absolute left-0 top-0 bottom-0 w-12 sm:w-20 md:w-32 bg-gradient-to-r from-black to-transparent z-10 hidden md:block" />
+          <div className="pointer-events-none absolute right-0 top-0 bottom-0 w-12 sm:w-20 md:w-32 bg-gradient-to-l from-black to-transparent z-10 hidden md:block" />
         </div>
 
         <div className="text-center mt-12 sm:mt-16 bg-gradient-to-r from-cyan-500/10 to-purple-500/10 border border-cyan-500/20 rounded-xl sm:rounded-2xl p-6 sm:p-8 lg:p-12">
