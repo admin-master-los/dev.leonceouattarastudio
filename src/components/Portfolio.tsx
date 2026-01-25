@@ -81,7 +81,7 @@ const Portfolio = () => {
     if (!carouselRef.current || loading || projects.length === 0) return;
 
     const carousel = carouselRef.current;
-    const scrollSpeed = 5.5;
+    const scrollSpeed = 10.5;
     let animationId;
 
     const animate = () => {
