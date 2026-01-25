@@ -1,6 +1,6 @@
 import React, { useState, useEffect, useRef } from 'react';
 import {
-  ExternalLink,
+  ExternalLink, 
   Github,
   TrendingUp,
   X,
@@ -275,7 +275,7 @@ const Portfolio = () => {
 
                 <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-7xl xl:text-8xl font-bold text-white mb-4 sm:mb-6 text-center max-w-6xl leading-tight px-4">
                   {selectedProject.content_project_modal.hero_title}
-                </h1>
+                </h1> 
 
                 <p className="text-base sm:text-lg md:text-xl lg:text-2xl text-gray-300 mb-8 sm:mb-12 text-center max-w-4xl leading-relaxed px-4">
                   {selectedProject.content_project_modal.hero_subtitle}
@@ -530,8 +530,8 @@ const Portfolio = () => {
             </div>
           </div>
         )}
-    </section>
+    </section> 
   );
 };
 
-export default Portfolio;
+export default Portfolio; 
