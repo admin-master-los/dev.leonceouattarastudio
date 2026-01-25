@@ -41,16 +41,20 @@ const Portfolio = () => {
   const scrollCarousel = (direction) => {
     if (!carouselRef.current) return;
     
-    const cardWidth = carouselRef.current.querySelector('div')?.offsetWidth || 0;
-    const gap = 24;
+    const carousel = carouselRef.current;
+    const cards = carousel.querySelectorAll('[data-project-card]');
+    if (cards.length === 0) return;
+    
+    const cardWidth = cards[0].offsetWidth;
+    const gap = parseInt(getComputedStyle(carousel).gap) || 16;
     const scrollAmount = cardWidth + gap;
     
-    const currentScroll = carouselRef.current.scrollLeft;
+    const currentScroll = carousel.scrollLeft;
     const targetScroll = direction === 'left' 
-      ? currentScroll - scrollAmount 
+      ? Math.max(0, currentScroll - scrollAmount)
       : currentScroll + scrollAmount;
     
-    carouselRef.current.scrollTo({
+    carousel.scrollTo({
       left: targetScroll,
       behavior: 'smooth'
     });
@@ -77,34 +81,9 @@ const Portfolio = () => {
     return () => window.removeEventListener('keydown', handleEscape);
   }, [isModalOpen]);
 
-  useEffect(() => {
-    if (!carouselRef.current || loading || projects.length === 0) return;
+  // Animation automatique désactivée - contrôle manuel uniquement
 
-    const carousel = carouselRef.current;
-    const scrollSpeed = 10.5;
-    let animationId;
-
-    const animate = () => {
-      if (!isPaused && carousel) {
-        carousel.scrollLeft += scrollSpeed;
-
-        if (carousel.scrollLeft >= carousel.scrollWidth / 2) {
-          carousel.scrollLeft = 0;
-        }
-      }
-      animationId = requestAnimationFrame(animate);
-    };
-
-    animationId = requestAnimationFrame(animate);
-
-    return () => {
-      if (animationId) {
-        cancelAnimationFrame(animationId);
-      }
-    };
-  }, [isPaused, loading, projects]);
-
-  const duplicatedProjects = projects.concat(projects);
+  const duplicatedProjects = projects;
 
   return (
     <section id="portfolio" className="py-12 sm:py-16 lg:py-20 relative overflow-hidden">
@@ -142,7 +121,7 @@ const Portfolio = () => {
 
           <div
             ref={carouselRef}
-            className="flex gap-4 sm:gap-5 md:gap-6 overflow-x-auto scroll-smooth px-1 sm:px-2"
+            className="flex gap-4 sm:gap-5 md:gap-6 overflow-x-auto scroll-smooth snap-x snap-mandatory"
             style={{ 
               scrollbarWidth: 'none', 
               msOverflowStyle: 'none',
@@ -158,11 +137,12 @@ const Portfolio = () => {
               return (
                 <div
                   key={`${project.id}-${index}`}
+                  data-project-card
                   onMouseEnter={() => setIsPaused(true)}
                   onMouseLeave={() => setIsPaused(false)}
                   onTouchStart={() => setIsPaused(true)}
                   onTouchEnd={() => setIsPaused(false)}
-                  className="flex-shrink-0 w-[85vw] sm:w-[70vw] md:w-[45vw] lg:w-[32vw] bg-white/5 backdrop-blur-sm border border-gray-700/50 rounded-2xl overflow-hidden hover:border-cyan-500/50 hover:bg-white/10 transition-all duration-500 group hover:scale-105 hover:shadow-2xl hover:shadow-cyan-500/20"
+                  className="flex-shrink-0 w-[90vw] sm:w-[70vw] md:w-[45vw] lg:w-[32vw] snap-center bg-white/5 backdrop-blur-sm border border-gray-700/50 rounded-2xl overflow-hidden hover:border-cyan-500/50 hover:bg-white/10 transition-all duration-500 group hover:scale-105 hover:shadow-2xl hover:shadow-cyan-500/20"
                 >
                   <div className="relative">
                     <div className="relative overflow-hidden h-44 sm:h-52 md:h-56 lg:h-64">
