@@ -8,6 +8,8 @@ import {
   Code2,
   Server,
   Cloud,
+  ChevronLeft,
+  ChevronRight,
 } from 'lucide-react';
 import { useProjects } from '../lib/useSupabaseData';
 
@@ -36,6 +38,15 @@ const Portfolio = () => {
     }, 300);
   };
 
+  const scrollCarousel = (direction) => {
+    if (!carouselRef.current) return;
+    const scrollAmount = carouselRef.current.offsetWidth * 0.8;
+    carouselRef.current.scrollBy({
+      left: direction === 'left' ? -scrollAmount : scrollAmount,
+      behavior: 'smooth'
+    });
+  };
+
   useEffect(() => {
     if (isModalOpen) {
       document.body.style.overflow = 'hidden';
@@ -61,26 +72,25 @@ const Portfolio = () => {
     if (!carouselRef.current || loading || projects.length === 0) return;
 
     const carousel = carouselRef.current;
-    let scrollAmount = 0;
-    const scrollSpeed = 0.5;
+    const scrollSpeed = 1;
+    let animationId;
 
     const animate = () => {
       if (!isPaused && carousel) {
-        scrollAmount += scrollSpeed;
-        carousel.scrollLeft = scrollAmount;
+        carousel.scrollLeft += scrollSpeed;
 
-        if (scrollAmount >= carousel.scrollWidth / 2) {
-          scrollAmount = 0;
+        if (carousel.scrollLeft >= carousel.scrollWidth / 2) {
+          carousel.scrollLeft = 0;
         }
       }
-      animationRef.current = requestAnimationFrame(animate);
+      animationId = requestAnimationFrame(animate);
     };
 
-    animationRef.current = requestAnimationFrame(animate);
+    animationId = requestAnimationFrame(animate);
 
     return () => {
-      if (animationRef.current) {
-        cancelAnimationFrame(animationRef.current);
+      if (animationId) {
+        cancelAnimationFrame(animationId);
       }
     };
   }, [isPaused, loading, projects]);
@@ -103,6 +113,24 @@ const Portfolio = () => {
         </div>
 
         <div className="relative mb-12 sm:mb-16">
+          {/* Bouton Gauche */}
+          <button
+            onClick={() => scrollCarousel('left')}
+            className="absolute left-2 sm:left-4 top-1/2 -translate-y-1/2 z-20 w-10 h-10 sm:w-12 sm:h-12 bg-white/10 backdrop-blur-md border border-white/20 rounded-full flex items-center justify-center hover:bg-cyan-500 hover:border-cyan-500 transition-all duration-300 group"
+            aria-label="Précédent"
+          >
+            <ChevronLeft size={20} className="sm:w-6 sm:h-6 text-white group-hover:scale-110 transition-transform" />
+          </button>
+
+          {/* Bouton Droit */}
+          <button
+            onClick={() => scrollCarousel('right')}
+            className="absolute right-2 sm:right-4 top-1/2 -translate-y-1/2 z-20 w-10 h-10 sm:w-12 sm:h-12 bg-white/10 backdrop-blur-md border border-white/20 rounded-full flex items-center justify-center hover:bg-cyan-500 hover:border-cyan-500 transition-all duration-300 group"
+            aria-label="Suivant"
+          >
+            <ChevronRight size={20} className="sm:w-6 sm:h-6 text-white group-hover:scale-110 transition-transform" />
+          </button>
+
           <div
             ref={carouselRef}
             className="flex gap-6 overflow-x-hidden scroll-smooth"
